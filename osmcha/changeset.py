@@ -29,7 +29,7 @@ except TypeError:
         'SUSPECT_WORDS',
         failobj=join(dirname(abspath(__file__)), 'suspect_words.yaml')
         )
-WORDS = yaml.safe_load(open(SUSPECT_WORDS_FILE, 'r').read())
+WORDS = yaml.safe_load(open(SUSPECT_WORDS_FILE, 'r', encoding='utf8').read())
 OSM_USERS_API = environ.get(
     'OSM_USERS_API',
     'https://www.openstreetmap.org/api/0.6/user/{user_id}'
